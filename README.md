@@ -2,7 +2,7 @@
 
 Proyecto didáctico con **22 clases Java** distribuidas en **10 paquetes**. Ilustra la creación de hilos, implementación de `Runnable`, coordinación, interrupción, prioridades, compartición de estado, procesamiento concurrente de archivos y tareas con `ExecutorService`, `Callable` y `FutureTask`.
 
-> **Uso educativo:** algunos programas contienen intencionalmente comportamientos no recomendados en producción (ciclos infinitos, carreras de datos, ausencia de `join`, etc.). Consulte [CODE_REVIEW.md](CODE_REVIEW.md) antes de ejecutarlos.
+> **Uso educativo:** algunos programas contienen intencionalmente comportamientos no recomendados en producción (ciclos infinitos, carreras de datos, ausencia de `join`, etc.).
 
 ## Requisitos
 
@@ -151,14 +151,3 @@ Los tres modos paralelos usan dos tareas y suman sus resultados. El resultado es
 6. `Callable`, `Future`, `FutureTask`, `ExecutorService` y agregación de resultados.
 7. Comparación de tiempos de ejecución secuencial y concurrente, considerando los costos de coordinación.
 
-## Limitaciones conocidas y recomendaciones
-
-- Los ejemplos no constituyen una biblioteca de concurrencia lista para producción.
-- Algunos no validan argumentos y otros no manejan adecuadamente interrupciones o errores de E/S.
-- No se encontraron pruebas automatizadas en `src/test`.
-- El ZIP incluye archivos de `.git/`, `.gradle/`, `build/` e `.idea/` que normalmente no deben distribuirse en un paquete de código fuente; Revise las reglas de exclusión antes de compartir archivos del proyecto.
-- Consulte **[CODE_REVIEW.md](CODE_REVIEW.md)** para los hallazgos por archivo, severidad, referencias de líneas y un plan de mejora.
-
-## Licencia
-
-No se identificó un archivo `LICENSE` en el material entregado. No se presupone una licencia de uso o redistribución.
