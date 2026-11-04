@@ -13,11 +13,11 @@ import java.util.logging.Logger;
 public class HelloThread extends Thread {
 
     public static final String TAG = HelloThread.class.getSimpleName();
-    public static final Logger LOGGER = Logger.getLogger(TAG);
+    public static final Logger LOG = Logger.getLogger(TAG);
 
     public void run() {
         // no hace mucho, nada más imprime hola
-        LOGGER.info("Hello from a thread: " + currentThread().getName());
+        LOG.info("Hello from a thread: " + currentThread().getName());
         System.out.printf("Hello from a thread: %s\n", currentThread().getName());
     }
 

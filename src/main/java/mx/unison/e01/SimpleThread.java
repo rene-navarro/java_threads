@@ -1,4 +1,5 @@
-package mx.unison.e01;/*
+package mx.unison.e01;
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -12,11 +13,11 @@ import java.util.logging.Logger;
  */
 public class SimpleThread implements Runnable {
     public static final String TAG = SimpleThread.class.getSimpleName();
-    public static final Logger LOGGER = Logger.getLogger(TAG);
+    public static final Logger LOG = Logger.getLogger(TAG);
 
     public void run() {
         String name = Thread.currentThread().getName();
-        LOGGER.info( name );
+        LOG.info( name );
         System.out.printf("Hello from a thread: %s" , name);
     }
 

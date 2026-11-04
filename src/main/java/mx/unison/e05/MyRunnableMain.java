@@ -18,6 +18,7 @@ public class MyRunnableMain {
         logger.info("Main start");
 
         MyRunnable myRunnable = new MyRunnable();
+
         Thread thread = new Thread(myRunnable);
 
         thread.start();

@@ -5,20 +5,34 @@ package mx.unison.e03;
  * @author rnavarro
  */
 class HelloRunner implements Runnable {
-    public static final int MAX = 500;
-    
-    private int i;
+    public static final int MAX = 50;
+
+    // la variable contador esta accesible pora cualquier thread
+    private int contador;
+
+
+    HelloRunner() {
+        super();
+        contador = 0;
+    }
+
 
     public void run() {
-        i = 0;
+        System.out.printf("Inicia thread: %s\n", Thread.currentThread().getName());
 
         while (true) {
             String name = Thread.currentThread().getName();
-            System.out.printf("%s: Hello %d\n",name, i++);
-            if (i == MAX) {
+
+            contador++;
+
+            System.out.printf("%s: Hello %d\n",name, contador);
+
+            if (contador == MAX) {
+                // terminar el ciclo y por lo tanto terminar la ejecución del thread
                 break;
             }
         }
+        System.out.printf("Termina thread: %s\n", Thread.currentThread().getName());
     }
 
     public static void main(String args[]) {

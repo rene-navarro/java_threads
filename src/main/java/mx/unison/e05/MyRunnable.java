@@ -8,6 +8,7 @@ import java.util.logging.Logger;
  */
 public class MyRunnable implements Runnable {
 
+    public static final long WAIT_SECONDS = 3L;
     Logger logger;
     public MyRunnable() {
         super();
@@ -33,7 +34,7 @@ public class MyRunnable implements Runnable {
             try {
                 // pausar 3 segundos
                 logger.info("SLEEPS");
-                Thread.sleep(3L * 1000L);
+                Thread.sleep(WAIT_SECONDS * 1000L);
                 logger.info("WAKES");
             } catch (InterruptedException e) {
                 e.printStackTrace();

@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 class HelloSlowRunner implements Runnable {
     public static final String TAG = HelloSlowRunner.class.getSimpleName();
     public static final int MAX = 50;
-    public static final long WAIT_TIME = 500L;
+    public static final long WAIT_TIME = 3;
 
     public static final Logger LOGGER = Logger.getLogger(TAG);
 
@@ -47,7 +47,7 @@ class HelloSlowRunner implements Runnable {
             }
             try {
                 // pausar ejecución
-                Thread.sleep(WAIT_TIME);
+                Thread.sleep(WAIT_TIME * 1000L);
             } catch (InterruptedException ex) {
                 LOGGER.severe(ex.getMessage());
             }
